@@ -47,3 +47,15 @@ class GreetingTests: XCTestCase {
     }
 
 }
+
+extension GreetingTests {
+    static var allTests : [(String, (GreetingTests) -> () throws -> Void)] {
+        return [
+            ("testGreetWhenHaveNotNamesThenReturnSimpleGreetMessage", testGreetWhenHaveNotNamesThenReturnSimpleGreetMessage),
+            ("testGreetWhenHaveOneNameThenReturnGreetMessageForOneName", testGreetWhenHaveOneNameThenReturnGreetMessageForOneName),
+            ("testGreetWhenHaveTwoNamesThenReturnGreetMessageForTwoNames", testGreetWhenHaveTwoNamesThenReturnGreetMessageForTwoNames),
+            ("testGreetWhenHaveThreeNamesThenReturnGreetMessageForThreeNames", testGreetWhenHaveThreeNamesThenReturnGreetMessageForThreeNames),
+            ("testGreetWhenHaveTwoEqualNamesThenReturnGreetMessageForTwoNames", testGreetWhenHaveTwoEqualNamesThenReturnGreetMessageForTwoNames),
+        ]
+    }
+}
