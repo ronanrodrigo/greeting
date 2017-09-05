@@ -1,7 +1,3 @@
-protocol GreetinGateway {
-    func names() -> [String]
-}
-
 struct Greeting {
 
     private let gateway: GreetinGateway
@@ -13,19 +9,15 @@ struct Greeting {
     func greet() -> String {
         let names = gateway.names()
 
-        if names.isEmpty {
-            return "Olá!"
-        }
-
-        let hi = "Olá"
-
-        var joinedNames = names.first!
+        var joinedNames = ""
         if names.count > 1 {
             joinedNames = names[0..<names.count-1].joined(separator: ", ")
-            return hi + " \(joinedNames)" + " e \(names.last!)!"
+            joinedNames = " \(joinedNames)" + " e \(names.last!)"
+        } else if names.count == 1 {
+            joinedNames = " \(names.first!)"
         }
-        return hi + " \(joinedNames)!"
 
+        return "Olá\(joinedNames)!"
     }
 
 }

@@ -1,20 +1,10 @@
 import XCTest
 @testable import Greeting
 
-class GreetinStubGateway: GreetinGateway {
-
-    var setupNamesReturn: [String] = []
-
-    func names() -> [String] {
-        return setupNamesReturn
-    }
-
-}
-
 class GreetingTests: XCTestCase {
 
-    var greeting: Greeting!
-    var gateway: GreetinStubGateway!
+    private var greeting: Greeting!
+    private var gateway: GreetinStubGateway!
 
     override func setUp() {
         gateway = GreetinStubGateway()
