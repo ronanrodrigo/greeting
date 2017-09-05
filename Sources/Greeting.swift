@@ -1,4 +1,4 @@
-struct Greeting {
+final class Greeting {
 
     private let gateway: GreetinGateway
 

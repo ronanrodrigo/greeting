@@ -1,6 +1,6 @@
 @testable import Greeting
 
-class GreetinStubGateway: GreetinGateway {
+final class GreetinStubGateway: GreetinGateway {
 
     var setupNamesReturn: [String] = []
 
